@@ -1,0 +1,22 @@
+.header{
+    width: 100%;
+    cursor: pointer;
+    position: fixed;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: rgb(58, 58, 58);
+    font-size: 3vw;
+    padding-bottom: 15px;
+    box-shadow: 0px 1px 5px #000;
+    color: #fff;
+    z-index: 100;
+}
+
+@media (max-width: 1000px){
+    .header{
+        padding-top: 15px;
+        font-size: 5vw;
+    }
+}
