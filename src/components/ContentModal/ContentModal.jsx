@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Modal from "@material-ui/core/Modal";
+import ModalModal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import axios from "axios";
@@ -131,9 +131,9 @@ export default function ContentModal({ children, media_type, id }) {
                     {content.overview}
                   </span>
 
-                  <div>
+                  {/* <div>
                     <Carousel id={id} media_type={media_type} />
-                  </div>
+                  </div> */}
 
                   <Button
                     variant="contained"
