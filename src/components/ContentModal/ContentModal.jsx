@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import ModalModal from "@material-ui/core/Modal";
+import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import axios from "axios";
@@ -12,7 +12,7 @@ import {
 import "./ContentModal.css";
 import { Button } from "@material-ui/core";
 import YouTubeIcon from "@material-ui/icons/YouTube";
-// import Carousel from "../Carousel/Carousel";
+import Carousel from "../Carousel/Carousel";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -71,12 +71,7 @@ export default function ContentModal({ children, media_type, id }) {
 
   return (
     <>
-      <div
-        className="media"
-        style={{ cursor: "pointer" }}
-        color="inherit"
-        onClick={handleOpen}
-      >
+      <div className="media" style={{ cursor: "pointer" }} color="inherit" onClick={handleOpen}>
         {children}
       </div>
       <Modal
@@ -131,9 +126,9 @@ export default function ContentModal({ children, media_type, id }) {
                     {content.overview}
                   </span>
 
-                  {/* <div>
+                  <div>
                     <Carousel id={id} media_type={media_type} />
-                  </div> */}
+                  </div>
 
                   <Button
                     variant="contained"
