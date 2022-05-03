@@ -69,3 +69,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 "# Movie-show" 
+
+
+
+bgc  =  F7F5F2 FDF6EC F5F5F5 FFFBE9 FFF6F6
+
+bgc dark  =  160F30 3B2E40 
