@@ -12,6 +12,10 @@ import {
 import "./ContentModal.css";
 import { Button } from "@material-ui/core";
 import YouTubeIcon from "@material-ui/icons/YouTube";
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import BookmarkIcon from '@material-ui/icons/Bookmark';
+import PlaylistAddIcon from '@material-ui/icons/PlaylistAdd';
+import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import Carousel from "../Carousel/Carousel";
 
 const useStyles = makeStyles((theme) => ({
@@ -22,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     width: "90%",
-    height: "80%",
+    height: "95%",
     backgroundColor: "#39445a",
     border: "1px solid #282c34",
     borderRadius: 10,
@@ -127,6 +131,13 @@ export default function ContentModal({ children, media_type, id }) {
                   </span>
 
                   <div>
+                    <ThumbUpAltIcon className="ContentModal__extraIcon" style={{fontSize: 30}} />
+                    <FavoriteIcon className="ContentModal__extraIcon" style={{fontSize: 30}} />
+                    <BookmarkIcon className="ContentModal__extraIcon" style={{fontSize: 30}} />
+                    <PlaylistAddIcon className="ContentModal__extraIcon" style={{fontSize: 30}} />
+                  </div>
+
+                  <div>
                     <Carousel id={id} media_type={media_type} />
                   </div>
 
@@ -139,6 +150,18 @@ export default function ContentModal({ children, media_type, id }) {
                   >
                     Watch the Trailer
                   </Button>
+
+                  <Button
+                    variant="contained"
+                    startIcon={<YouTubeIcon />}
+                    color="primary"
+                    target="__blank"
+                    // href={`https://www.youtube.com/watch?v=${video}`}
+                    style={{marginTop: '10px'}}
+                  >
+                    Watch Movie
+                  </Button>
+
                 </div>
               </div>
             </div>
