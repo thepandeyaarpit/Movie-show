@@ -157,7 +157,7 @@ export default function ContentModal({ children, media_type, id }) {
                     color="primary"
                     target="__blank"
                     // href={`https://www.youtube.com/watch?v=${video}`}
-                    style={{marginTop: '10px'}}
+                    style={{marginTop: '2px'}}
                   >
                     Watch Movie
                   </Button>
