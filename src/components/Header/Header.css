@@ -14,9 +14,12 @@
     z-index: 100;
 }
 
-.main{
+/* .main{
     display: flex;
 }
+.maintwo{
+    right: 0;
+} */
 
 @media (max-width: 1000px){
     .header{
