@@ -17,8 +17,9 @@ import BookmarkIcon from '@material-ui/icons/Bookmark';
 import PlaylistAddIcon from '@material-ui/icons/PlaylistAdd';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import Carousel from "../Carousel/Carousel";
+import { Badge } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme, vote_average) => ({
   modal: {
     display: "flex",
     alignItems: "center",
@@ -36,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ContentModal({ children, media_type, id }) {
+export default function ContentModal({ children, media_type, id, vote_average }) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState();
@@ -126,9 +127,21 @@ export default function ContentModal({ children, media_type, id }) {
                     <i className="tagline">{content.tagline}</i>
                   )}
 
-                  <span className="ContentModal__description">
+                  <Badge badgeContent={vote_average} color={vote_average>6?'primary':'secondary'} />
+                  {/* Rating */}
+                  {/* Add your Review */}
+                  <div className="review_rate">
+                    <div>
+                      <p>Add your Rating and Review</p>
+                    </div>
+                    <div>
+                      <button className="button_review">Rate Now</button>
+                    </div>
+                  </div>
+
+                  {/* <span className="ContentModal__description">
                     {content.overview}
-                  </span>
+                  </span> */}
 
                   <div>
                     <ThumbUpAltIcon className="ContentModal__extraIcon" style={{fontSize: 30}} />
