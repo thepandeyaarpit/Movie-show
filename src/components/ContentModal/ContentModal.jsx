@@ -57,7 +57,7 @@ export default function ContentModal({ children, media_type, id, vote_average })
     );
 
     setContent(data);
-    // console.log(data);
+    console.log(data);
   };
 
   const fetchVideo = async () => {
